@@ -1,0 +1,2 @@
+src/daemon.py usr/lib/pidooria/libexec
+src/config.py etc/pidooria

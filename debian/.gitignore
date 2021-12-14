@@ -1,0 +1,8 @@
+/files
+/.debhelper/
+/*.debhelper
+/*.substvars
+/*-stamp
+/*.debhelper.log
+
+/pidooria/

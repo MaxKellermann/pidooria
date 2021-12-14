@@ -1,0 +1,11 @@
+[Unit]
+Description=Door Opener Daemon
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+ExecStart=/usr/lib/pidooria/libexec/daemon.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

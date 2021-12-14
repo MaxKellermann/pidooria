@@ -1,0 +1,14 @@
+Source: pidooria
+Section: non-free/admin
+Priority: extra
+Maintainer: Max Kellermann <max.kellermann@gmail.com>
+Build-Depends: debhelper (>= 13.3~)
+Standards-Version: 4.0.0
+
+Package: pidooria
+Architecture: all
+Depends: ${misc:Depends}, systemd-sysv, python3-aionotify,
+ python3-evdev, python3-rpi.gpio
+Description: Door opener daemon
+ pidooria is a daemon which switches a relay when certain input
+ devices report key presses.
