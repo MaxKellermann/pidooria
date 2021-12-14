@@ -57,7 +57,6 @@ active_devices = set()
 
 async def handle_input_device(device, switch):
     global active_devices
-    active_devices.add(device.path)
     try:
         async for event in device.async_read_loop():
             if event.type == evdev.ecodes.EV_KEY and event.value == evdev.KeyEvent.key_down:
@@ -82,6 +81,7 @@ def scan_input_devices():
             continue
         if device.name in inputs:
             print(f"add input device {device.path} '{device.name}'")
+            active_devices.add(device.path)
             asyncio.ensure_future(handle_input_device(device, inputs[device.name]))
 
 # inotify in /dev/input detects newly connected devices
