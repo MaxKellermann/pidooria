@@ -7,7 +7,7 @@ Standards-Version: 4.0.0
 
 Package: pidooria
 Architecture: all
-Depends: ${misc:Depends}, systemd-sysv, python3-aionotify,
+Depends: ${misc:Depends}, systemd-sysv, bluez, python3-aionotify,
  python3-evdev, python3-rpi.gpio
 Description: Door opener daemon
  pidooria is a daemon which switches a relay when certain input
